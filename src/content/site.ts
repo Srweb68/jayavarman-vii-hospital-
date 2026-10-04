@@ -67,7 +67,6 @@ export const events: EventItem[] = [
 export const navItems = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
-  { to: "/staff", label: "Staff" },
   { to: "/services", label: "Services" },
   { to: "/news", label: "News" },
   { to: "/events", label: "Events" },

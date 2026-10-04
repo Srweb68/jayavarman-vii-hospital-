@@ -4,8 +4,8 @@ import hero from "@/assets/hero.jpg";
 import blood from "@/assets/blood.jpg";
 import building from "@/assets/building.jpg";
 import { Section, SectionHeading } from "@/components/site/Layout";
-import { ServiceCard, StaffCard, NewsCard, EventCard } from "@/components/site/Cards";
-import { hospital, services, staff, news, events } from "@/content/site";
+import { ServiceCard, NewsCard, EventCard } from "@/components/site/Cards";
+import { hospital, services, news, events } from "@/content/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -79,13 +79,7 @@ function Home() {
         </div>
       </Section>
 
-      <Section className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
-        <div>
-          <SectionHeading title="Our staff" link={{ to: "/staff", label: "Meet the team" }} />
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-            {staff.slice(0, 3).map((p, i) => <StaffCard key={i} person={p} />)}
-          </div>
-        </div>
+      <Section>
         <div>
           <SectionHeading title="Latest news" link={{ to: "/news", label: "All news" }} />
           <div className="grid gap-4">{news.slice(0, 2).map((n, i) => <NewsCard key={i} item={n} />)}</div>
