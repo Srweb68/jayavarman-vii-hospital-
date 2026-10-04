@@ -35,7 +35,7 @@ export function StaffCard({ person }: { person: Staff }) {
   );
 }
 
-export function NewsCard({ item, image }: { item: NewsItem; image?: string }) {
+export function NewsCard({ item, image }: { item: NewsItem; image?: string | undefined }) {
   return (
     <article className="glass flex flex-col overflow-hidden rounded-3xl">
       {image && <img src={image} alt="" loading="lazy" className="aspect-[16/9] w-full object-cover" />}
